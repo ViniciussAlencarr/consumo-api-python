@@ -16,16 +16,14 @@
                 {% csrf_token %}
                 {{form}}
                 <div>
-
                     <input type="submit" value="Salvar Cep">
                 </div>
             </form>
         </div>
     </div>
     <div>
-        {% for dbs in db %}
-        {{dbs.cep}}
-        {% endfor %}
+
+        {{request}}
     </div>
     
 </body>
