@@ -20,5 +20,6 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homeScreen, name='home'),
-    path('create/', create, name='create')
+    path('create/', create, name='create'),
+    path('limpar/<int:pk>/', limpar, name='limpar')
 ]
