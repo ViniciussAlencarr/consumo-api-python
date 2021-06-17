@@ -9,9 +9,8 @@ mydb = mysql.connector.connect(
   database="db-pg"
 )
 mycursor = mydb.cursor()
-mycursor.execute("SELECT * FROM app_consultacep;")
+mycursor.execute("SELECT cep FROM app_consultacep;")
 dbResponse = mycursor.fetchone()
 def requisicao(cepValue):
-  cep = cepValue
-  request = requests.get('https://viacep.com.br/ws/{}/json/'.format(cep))
-  return request.text
+  request = requests.get("https://viacep.com.br/ws/{0}/json/".format(cepValue))
+  return request.text 

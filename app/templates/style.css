@@ -1,3 +1,6 @@
+body .aviso {
+    background-color: black;
+}
 .toggle {
     border-radius: 20px;
     position: fixed;
@@ -12,6 +15,10 @@
     cursor: pointer;
     z-index: 1000;
 
+}
+
+.aviso {
+    background-color: black;
 }
 
 .sss {

@@ -9,7 +9,6 @@ def homeScreen(request):
     cliente = data['db'] = ConsultaCep.objects.all()
     if cliente:
         data['db'] = ConsultaCep.objects.all()[0]
-    data['request'] = ''
     if data['form'].is_valid():
         data['form'].save()
         aux = data['form'].cleaned_data['cep']
